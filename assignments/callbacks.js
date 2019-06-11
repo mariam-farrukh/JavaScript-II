@@ -72,9 +72,23 @@ contains('Pencil', items, console.log)
 contains('eraser', items, console.log)
 
 /* STRETCH PROBLEM */
+const arrayWithDuplicates = [1, 2, 2, 3, 3, 3, 4, 4]
 
-function removeDuplicates(array, cb) {
-  // removeDuplicates removes all duplicate values from the given array.
-  // Pass the duplicate free array to the callback function.
-  // Do not mutate the original array.
-}
+function removeDuplicates(array, cb) {	function removeDuplicates(array, cb) {
+// removeDuplicates removes all duplicate values from the given array.
+// Pass the duplicate free array to the callback function.
+// Do not mutate the original array.
+  return cb(array);
+}	}
+
+ console.log(removeDuplicates(arrayWithDuplicates, function(array){
+
+   let noDuplicatesArray = [];
+  array.forEach(item => {
+      if (!noDuplicatesArray.includes(item)) {
+          noDuplicatesArray.push(item);  
+      }
+
+   });
+  return noDuplicatesArray;
+}));
